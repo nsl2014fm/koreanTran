@@ -31,10 +31,9 @@ def loadHtml(url):
 
             interval = random.uniform(0.001, 20)
             time.sleep(interval)  ##设置定时
-            print result
             return result
     except urllib2.URLError, e:
-        print e.reason
+        print "====出错原因==="+e.reason+"============"
         return
 
 def regular(html):
@@ -94,10 +93,7 @@ def loadTxt():
     lines=words.readlines()
     compare_line=compare.readlines()
 
-    word_load.close()
-    words.close()
-    compare.close()
-    m = 0
+    kkk = 0
     countLine = 0
     while True:
         for m in range(len(compare_line),len(lines)):
@@ -113,18 +109,20 @@ def loadTxt():
 
                 html=loadHtml(url) ##获得页面
                 item=regular(html)  ##正则匹配
+                word_load.write(line + '\n')  #写入文件
                 if (item is not None):
-                    print "目前有效数" + str(m)
+
                     items.append(item)
-                    data.write(items[m] + "\n")  # 对txt进行写入操作
-                    m = m + 1
+                    data.write(items[kkk] + "\n")  # 对txt进行写入操作
+                    kkk = kkk + 1
+                    print "目前有效数" + str(kkk)
                 else:
                     continue
-
-                word_load.write(line+'\n')
             else:
                 break
-
+    word_load.close()
+    words.close()
+    compare.close()
     data.close()
 
     items=json.dumps(items,ensure_ascii=False)
