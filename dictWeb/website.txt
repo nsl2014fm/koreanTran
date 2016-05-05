@@ -1,0 +1,11 @@
+http://tran.httpcn.com/ 不能直接Url跳转翻译
+http://www.ichacha.net/kr/  可以直接url中翻译
+http://www.388g.com/tts/hanyu/ 需要选择select标签
+http://www.chazidian.com/hanyufanyi/ 直接可以提交词汇进行翻译
+http://ko.free9.cn/ 选择option
+
+
+http://kr.tingroom.com/yuedu/hysjyd/26290.html
+http://rki.kbs.co.kr/learn_korean/lessons/c_index.htm?learn_id=0205  韩语会话-句子
+http://www.examw.com/kr/read/   韩语阅读
+http://www.k-xue.com/hanyuxuexi/  有中韩对照的文章，但是也有全中文，类似帖子的
