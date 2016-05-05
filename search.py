@@ -63,8 +63,6 @@ def translate(word):
     #=========筛选字符=============================
 
 def selectHtml(html):
-    re_h = re.compile('<[^>]+>') #取html标签
-    kr='(?<=\<div\>)[^<,^>](?=\</div\>)'
     re_br = re.compile('<br\s*?/?>')  # 处理换行
     blank_line = re.compile('\n')
     re_style = re.compile('style="[^"]+"', re.I)  # 去掉style
